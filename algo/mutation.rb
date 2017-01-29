@@ -3,7 +3,15 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
-
+  base_letters = base_word.chars
+  mutation_letters = mutation.chars
+    
+  mutation_letters.each do |letter|
+    if base_letters.include?(letter) == false
+      return false
+    end
+  end
+  return true
 end
 
 # Driver code - don't touch anything below this line.
